@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel de Controle</title>
+
+  <link rel="stylesheet" href="assets/css/index-style.css"><!--Custom CSS-->
+  <script src="https://kit.fontawesome.com/f8c979c0bf.js" crossorigin="anonymous"></script><!--Font Awesone-->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css"><!--Bootstrap 5.3.1-->
+  <link rel="stylesheet" href="assets/css/sidebars.css"><!--Sidebars-->
+
+  <link rel="shortcut icon" href="assets/icon/favicon.png" type="image/x-icon"><!--Favicon-->
+
+</head>
+<body>
+
+  <!--Sidebar-->
+  <div class="sidebar float-start d-flex flex-column flex-shrink-0 p-3 text-bg-dark" >
+    <div class="logo">
+      <h4></h4>
+    </div>
+    
+    <hr>
+    <p class="p-1 border rounded bg-light text-dark mb-0">Tecnologia da Informação</p>
+    <ul class="nav nav-pills flex-column mb-1">
+      <li class="nav-item">
+        <a href="#" class="nav-link text-white">
+          Gestão de Telefonia
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-link text-white">
+          Usuário
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-link text-white">
+          Documentos
+        </a>
+      </li>
+    </ul>
+
+    <p class="p-1 border rounded bg-light text-dark mb-0">Marketing</p>
+    <ul class="nav nav-pills flex-column mb-2">
+      <li class="nav-item">
+        <a href="#" class="nav-link text-white">
+          Gestão de Telefonia
+        </a>
+      </li>
+    </ul>
+
+    <p class="p-1 border rounded bg-light text-dark mb-0">Administrativo</p>
+    <ul class="nav nav-pills flex-column mb-2">
+      <li class="nav-item">
+        <a href="#" class="nav-link text-white">
+          Ramais
+        </a>
+      </li>
+    </ul>
+
+    
+    
+  </div>
+
+  <!--Barra Principal-->
+  <nav class="navbar navbar-expand-sm text-bg-dark mb-2">
+    <div class="container-fluid">
+      <div class="navbar-collapse" id="navbarSupportedContent">
+        <div class="px-3">
+          <button class="seta">
+            <i class="fa-solid fa-bars" class="fa-solid fa-bars" style="color: #ffffff;"></i>
+          </button>
+          <!--<i class="seta fa-solid fa-caret-up fa-2xl"></i>  -->
+          
+        </div>
+             
+        <div class="me-auto mb-2 mb-lg-0">
+          <h4>Olá, <strong>Diogenes!</strong></h4>
+        </div>
+        <div class="dropstart">
+          <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="assets/images/diogenes.png" alt="" width="48" height="48" class="rounded-circle me-2">
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark shadow">
+            <li><a class="dropdown-item" href="#">Perfil</a></li>
+            <li><a class="dropdown-item" href="#">Configurações</a></li>
+            <li><a class="dropdown-item" href="#">Mensagens</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Sair</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!--Container Principal-->
+	<div class="container-fluid">
+		<div class="row">
+		  <div class="col-md-12">
+			  <div class="row">
+				<div class="d-flex justify-content-between align-items-center pt-3 pb-2">
+					<h1 class="display-5 mb-4">TELA DE BLOQUEIO</h1></br>
+				</div>
+					<div class="row mb-3">
+						<form method="POST" action="proc_upload_lock.php" enctype="multipart/form-data">
+							<label for="nome" class="col-sm-3 col-form-label">EMPRESA</label>
+							<div class="col-sm-7">
+								<select class="mb-4 form-control" aria-label="Default select example" name="company" id="company">
+									<option value="/var/www/html/servicos.elv.com.br/wallpaper/bh/lock_screen_ image/">ADMINISTRATIVO FAMINAS FILIAL BH</option>
+									<option value="/var/www/html/servicos.elv.com.br/wallpaper/bh_academico/lock_screen_ image/">ACADÊMICO FAMINAS FILIAL BH</option>
+									<option value="/var/www/html/servicos.elv.com.br/wallpaper/mre/lock_screen_ image/">ADMINISTRATIVO FAMINAS CENTRO UNIVERSITÁRIO</option>
+									<option value="/var/www/html/servicos.elv.com.br/wallpaper/mre_academico/lock_screen_ image/">ACADÊMICO FAMINAS CENTRO UNIVERSITÁRIO</option>
+									<option value="/var/www/html/servicos.elv.com.br/wallpaper/concessionarias/lock_screen_ image/">CONCESSIONÁRIAS</option>
+									<option value="/var/www/html/servicos.elv.com.br/wallpaper/transportes/lock_screen_ image/">TRANSPORTES</option>						  
+								</select>
+									Imagem: <input name="arquivo" type="file"><br><br>
+									<input type="submit" value="Enviar">
+							</div>
+						</form>
+					</div>
+						<span id="msgAlerta"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+  <!--Rodapé-->
+  <footer class="footer fixed-bottom text-bg-dark">
+    <div class="d-sm-flex justify-content-center justify-content-sm-around">
+      <span class="link-elv text-center text-sm-left d-block d-sm-inline-block"><a class="text-warning text-decoration-none" href="https://elv.com.br" target="_blank">Empresas Lael Varella</a></span>
+      <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Copyright © 2023. Todos os direitos reservados.</span>
+    </div>
+  </footer>
+
+  <!--Scripts-->
+  <script src="assets/js/bootstrap.bundle.min.js"></script><!--Bootstrap JS 5.3.1-->
+  <script src="assets/js/scripts.js"></script><!--Custom JS-->
+  <script src="assets/js/sidebars.js"></script>
+</body>
+</html>

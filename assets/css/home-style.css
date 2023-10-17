@@ -1,0 +1,28 @@
+body {
+  background-image: url("../images/background/fundo.png");
+  background-color: #221E62;
+  background-repeat: no-repeat; 
+  background-size: 100% 100%;
+}
+
+.menu-bar {
+  padding: 0 15px;
+  line-height: 130px;
+}
+
+.menu-item {
+  margin: 0 5px;
+}
+
+.menu-item img {
+  width: 80px;
+  height: 80px;
+  padding: 2px;
+  &:hover {
+    border: 1px solid white;
+  }
+}
+
+.menu-item:last-child img {
+  width: 130px;
+}
