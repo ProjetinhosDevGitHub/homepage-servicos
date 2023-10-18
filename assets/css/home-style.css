@@ -14,15 +14,26 @@ body {
   margin: 0 5px;
 }
 
-.menu-item img {
-  width: 80px;
+.menu-item a {
+  display: block;
   height: 80px;
-  padding: 2px;
   &:hover {
     border: 1px solid white;
   }
 }
 
-.menu-item:nth-child(4) img {
+.menu-item img {
+  width: 80px;
+  height: 80px;
+  padding: 2px;
+}
+
+.menu-item:nth-child(7) img {
   width: 130px;
+}
+
+.menu-item:nth-child(8) img {
+  width: 130px;
+  height: 30px;
+  margin-top: 24px;
 }
