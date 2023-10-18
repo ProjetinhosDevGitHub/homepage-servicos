@@ -23,6 +23,6 @@ body {
   }
 }
 
-.menu-item:last-child img {
+.menu-item:nth-child(4) img {
   width: 130px;
 }
